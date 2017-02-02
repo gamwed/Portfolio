@@ -1,0 +1,75 @@
+$hov-col: #4da6ff
+$rgba: rgba(255,255,255,0.7)
+*
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+body
+	background: #f2f2f2;
+	margin: 0;
+	font-family: arial;
+header
+	background: url(img/theam.jpg);
+	background-size: cover;
+	height: 700px;
+.container 
+	width: 80%;
+	margin: 0 auto
+.inner-header
+	font-size: 0;
+	background: $rgba;
+.logo 
+	display: inline-block;
+	vertical-align: middle;
+	width: 30%;
+	h1
+		font-style: italic;
+		font-size: 23pt;
+		margin: 0;
+.color-letter
+	color: $hov-col
+nav
+
+	display: inline-block;
+	width: 70%;
+	ul
+		vertical-align: bottom;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		li
+			text-align: center;
+			width: 20%;
+			display: inline-block;
+			list-style: none
+			line-height: 100px;
+		li:hover:after
+			content: '';
+			width: 50%;
+			margin: 0 auto
+			display: block;
+			height: 4px
+			background-color: $hov-col
+			margin-top: -40px;
+		a
+			font-size: 13pt;
+			color: #000;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: 700;
+.info
+	display: inline-block;
+	margin-left: 34%;
+	border: 10px solid $rgba;
+	line-height: 100px;
+	margin-top: 300px
+	padding: 10px;
+	text-align: center;
+	h2
+		margin: 0 auto
+		display: block;
+		background: $rgba;
+		color: rgba(0,0,0,0.1)
+		font-size: 40px;
+		text-transform: uppercase;
+
