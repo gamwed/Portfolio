@@ -2,8 +2,15 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<title>Pal0</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<script src="js/main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
+
 </head>
 <body>
 	
@@ -15,7 +22,7 @@
 				</div>
 				<nav>
 					<ul>
-						<li><a href="">My story</a></li>
+						<li><a href="#m_st">My story</a></li>
 						<li><a href="">my Skils</a></li>
 						<li><a href="">my lyrics</a></li>
 						<li><a href="">my achievs</a></li>
@@ -29,7 +36,62 @@
 		</div>	 -->
 	</header>
 
+	<section id="m_st">
+		<div class="m_st_wrapper">
+			<!-- Swiper -->
+    <div class="swiper-container">
+        <div class="parallax-bg" data-swiper-parallax="-23%"></div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+            	<div class="slider-inner" id="left_text"> 
+                <div class="title" data-swiper-parallax="-100">General</div>
+                <div class="text" data-swiper-parallax="-300">
+                    <p>Name: Myronenko Olexander.</p>
+                    <p>Age: 20 years.</p>
+                    <p>Gender: Male.</p>
+                    <p>Location: Ukrain. Kharkive.</p>
+                    <p>Exp: 0.5 yr.</p>
+                    <p></p>
+                </div>
+               </div> 
+            </div>
+            <div class="swiper-slide" id="center_text">
+            	<div class="slider-inner"> 
+                <div class="title" data-swiper-parallax="-100">Slide 2</div>
+                <div class="text" data-swiper-parallax="-300">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
+                </div>
+               </div> 
+            </div>
+            <div class="swiper-slide" id="right_text">
+              <div class="slider-inner"> 
+                <div class="title" data-swiper-parallax="-100">Slide 3</div>
+                <div class="text" data-swiper-parallax="-300">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
+                </div>
+               </div> 
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+    </div>
+		</div>
+	</section>
 
-
+		<script src="js/main.js"></script>
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        grabCursor: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        parallax: true,
+        speed: 600,
+    });
+    </script>
 </body>
 </html>
