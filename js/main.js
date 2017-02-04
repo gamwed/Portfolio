@@ -1,12 +1,11 @@
 $('a[href^="#"]').bind('click.smoothscroll',function (e) {
- e.preventDefault();
- 
+e.preventDefault(); 
 var target = this.hash,
- $target = $(target);
+$target = $(target);
  
 $('html, body').stop().animate({
  'scrollTop': $target.offset().top
- }, 500, 'swing', function () {
+ }, 800, 'swing', function () {
  window.location.hash = target;
  });
  });

@@ -1,5 +1,11 @@
-$hov-col: #4da6ff
+$hov-col: #AB00FF;
 $rgba: rgba(255,255,255,0.7)
+$gry: #666666;
+$f-c: 'Cousine'
+$red: #FF0000;
+$green: #32FF00;
+$wh: #fff;
+
 *
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -7,7 +13,7 @@ $rgba: rgba(255,255,255,0.7)
 body
 	background: #f2f2f2;
 	margin: 0;
-	font-family: arial;
+	font-family: $f-c;
 header
 	background: url(img/theam.jpg);
 	background-size: cover;
@@ -20,20 +26,21 @@ header
 	background: $rgba;
 .logo 
 	display: inline-block;
-	vertical-align: middle;
 	width: 30%;
+	padding-top: 10.5px;
+	padding-bottom: 10.5px;
 	h1
 		font-style: italic;
-		font-size: 23pt;
+		font-size: 30pt;
 		margin: 0;
-.color-letter
+.clr-ltr
 	color: $hov-col
 nav
-
+	vertical-align: top;
 	display: inline-block;
 	width: 70%;
 	ul
-		vertical-align: bottom;
+		vertical-align: top;
 		padding: 0;
 		margin: 0;
 		width: 100%;
@@ -42,17 +49,24 @@ nav
 			width: 20%;
 			display: inline-block;
 			list-style: none
-			line-height: 100px;
-		li:hover:after
-			content: '';
-			width: 50%;
-			margin: 0 auto
-			display: block;
-			height: 4px
-			background-color: $hov-col
-			margin-top: -40px;
+			line-height: 90px;
+			padding-top: 10.5px;
+			padding-bottom: 10.5px;
+			&::after
+				content: '';
+				width: 0%;
+				margin: 0 auto
+				display: block;
+				height: 4px
+				background-color: $hov-col
+				margin-top: -30px;
+				transition: width 0.35s;
+				animation-timing-function: ease-in-out;
+			&:hover
+				&::after
+					width: 50%;
 		a
-			font-size: 13pt;
+			font-size: 15pt;
 			color: #000;
 			text-decoration: none;
 			text-transform: uppercase;
@@ -71,22 +85,101 @@ nav
 		background: $rgba;
 		color: rgba(0,0,0,0.1)
 		font-size: 40px;
-		text-transform: uppercase;
-#right_text
-	padding-left: 55%;
-	padding-right: 90px;
+		text-transform: uppercase;	
+
+.tab h2
+	position: absolute;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	font-size: 45pt;
+	text-shadow: 1px 1px 10px black
+	text-transform: uppercase;
+	z-index: 2;
+	margin: 0;
+	margin-top: -52px;
+	color: $wh
+	&:after
+		content: '';
+		display: block;
+		height: 6px;
+		width: 20%;
+		background: $wh
+		position: absolute;
+		top: 15px;
+		left: 35%;
+		border-radius: 20px;
+		z-index: -1;
+	&:before
+		content: '';
+		display: block;
+		height: 5.5px;
+		width: 20%;
+		background: $wh
+		position: absolute;
+		top: -30px;
+		right: 40%;
+		border-radius: 20px;	
+		z-index: -1;
+
+#m_st
 	p
-		text-align: justify;
-#center_text
-	padding: 60px 90px;
-	p
-		text-align: justify;
+		font-weight: 400;
+		font-family: $f-c;
+		font-size: 20px;
+#undr_line
+	:after
+		content: '';
+		width: 90%;
+		margin: 0 auto
+		display: block;
+		height: 4px
+		background-color: $gry
+		margin-top: 10px;
+	h3
+		margin: 0;	
+.title
+	margin-top: 0;
+	&:first-letter	
+		font-size: 35px;
+		color: $hov-col
+
 #left_text
+	max-width: 550px;
+	ul
+		list-style-image: url(img/list.png);
+		p
+			text-align: left;
+	
+#center_left
 	max-width: 400px;
+	h3:after
+		background: $green;
 	p
-		text-align: justify;	
+		text-align: left;
+
+
+#center_right
+	position: absolute;
+	bottom: 45px;
+	right: 45px;
+	max-width: 400px;
+	h3:after
+		background: $red;
+	p
+		text-align: center;
+
+#right_text
+	position: absolute;
+	right: 45px;
+	top: 16%;
+	max-width: 45%;
+	p
+		text-align: left;	
+
 .slider-inner
 	padding: 50px;
 	background: $rgba;
 	border-radius: 20px;
+	box-shadow: 0 0 20px rgba(0,0,0,0.5)
 	

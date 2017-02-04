@@ -7,7 +7,7 @@
     font-size: 18px;
     color:#fff;
     padding: 0;
-    padding: 90px 0;
+    padding: 45px 45px;
 }
 .parallax-bg {
     position: absolute;
@@ -20,10 +20,11 @@
     background-image: url(img/paralax3.jpg);
 }
 .swiper-slide .title {
-    font-size: 41px;
+    font-size: 30px;
     font-weight: 300;
     color: #000;
     text-align: center;
+    margin-bottom: 15px;
 }
 .swiper-slide .text {
     color: #000;
@@ -33,4 +34,7 @@
 }
 .swiper-wrapper {
     height: 400px;
+}
+.swiper-pagination-white .swiper-pagination-bullet {
+    background: #AB00FF;
 }
