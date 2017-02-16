@@ -9,3 +9,15 @@ $('html, body').stop().animate({
  window.location.hash = target;
  });
  });
+
+// var sk = $ ('.skill');
+
+// $('.skill_wrapper').hover(function(){
+//     $(".skill, .skill_wrapper").animate({left: "0px"},{queue:false,duration:500});
+//     $(".skill_wrapper").animate({left: "150px"},{queue:false,duration:500});
+//     sk.hide();
+// },function(){
+//     $(".skill").animate({left: "-150px"},{queue:false,duration:500});
+//     $(".skill_wrapper").animate({left: "0px"},{queue:false,duration:500});
+//     sk.show();
+// });

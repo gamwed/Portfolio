@@ -14,33 +14,39 @@ body
 	background: #f2f2f2;
 	margin: 0;
 	font-family: $f-c;
+	ul
+		list-style-image: url(img/list.png);
 header
 	background: url(img/theam.jpg);
 	background-size: cover;
 	height: 100vh;
 .container 
-	width: 80%;
+	width: 85%;
 	margin: 0 auto
 .inner-header
 	font-size: 0;
 	background: $rgba;
+	padding-top: 10px;
+	padding-bottom: 10px;
 .logo 
 	display: inline-block;
 	width: 30%;
-	padding-top: 10.5px;
-	padding-bottom: 10.5px;
+	height: 100%;
+	vertical-align: middle;
 	h1
 		font-style: italic;
-		font-size: 30pt;
+		font-size: 25px;
 		margin: 0;
 .clr-ltr
 	color: $hov-col
+#rbga_bg
+	background-color: $rgba;	
 nav
-	vertical-align: top;
+	vertical-align: middle;
 	display: inline-block;
 	width: 70%;
+	height: 100%;
 	ul
-		vertical-align: top;
 		padding: 0;
 		margin: 0;
 		width: 100%;
@@ -49,9 +55,6 @@ nav
 			width: 20%;
 			display: inline-block;
 			list-style: none
-			line-height: 90px;
-			padding-top: 10.5px;
-			padding-bottom: 10.5px;
 			&::after
 				content: '';
 				width: 0%;
@@ -59,14 +62,14 @@ nav
 				display: block;
 				height: 4px
 				background-color: $hov-col
-				margin-top: -30px;
+				margin-top: 5px;
 				transition: width 0.35s;
 				animation-timing-function: ease-in-out;
 			&:hover
 				&::after
 					width: 50%;
 		a
-			font-size: 15pt;
+			font-size: 15px;
 			color: #000;
 			text-decoration: none;
 			text-transform: uppercase;
@@ -87,20 +90,18 @@ nav
 		font-size: 40px;
 		text-transform: uppercase;	
 
-.tab h2
-	position: absolute;
-	width: 100%;
-	display: inline-block;
-	text-align: center;
-	font-size: 45pt;
-	text-shadow: 1px 1px 10px black
-	text-transform: uppercase;
-	z-index: 2;
-	margin: 0;
-	margin-top: 5px;
-	color: $wh
-
-
+.tab 
+	h2
+		position: absolute;
+		width: 100%;
+		display: inline-block;
+		text-align: center;
+		font-size: 45pt;
+		text-shadow: 1px 1px 10px black
+		text-transform: uppercase;
+		z-index: 10000;
+		margin: 0;
+		color: $wh
 #m_st
 	p
 		font-weight: 400;
@@ -125,10 +126,8 @@ nav
 
 #left_text
 	max-width: 550px;
-	ul
-		list-style-image: url(img/list.png);
-		p
-			text-align: left;
+	p
+		text-align: left;
 	
 #center_left
 	max-width: 400px;
@@ -161,4 +160,79 @@ nav
 	background: $rgba;
 	border-radius: 20px;
 	box-shadow: 0 0 20px rgba(0,0,0,0.5)
-	
+#m_sk
+	height: 100vh;
+.skill_row
+	display: block;
+	height: 50%;
+	font-size: 0;
+.skill_wrapper
+	position: relative;
+	display: inline-block;
+	width: 50%;
+	height: 250px;
+	left: 0
+/*	background-image: url(img/html5.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	-webkit-background-size: contain;
+	background-size: contain;*/
+.skill_html
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 50vh;
+	left: -250px;
+	transition: .5s;
+	vertical-align: middle;
+	z-index: 5;
+	padding-top: 100px;
+	ul
+		display: block;
+		max-height: 100%;
+		margin-top: 0;
+		margin-bottom: 0;
+		width: 65%;
+		padding-left: 10%;
+	&:hover
+		background: $rgba;
+		background-image: none;
+		z-index: 4;
+		transform: translateX(250px);
+		font-size: 17px;
+		color: #000;
+	img
+		position: absolute;
+		display: block;
+		right: 5%;
+		width: 30%;	
+.skill_css
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 50vh;
+	right: -250px;
+	transition: .5s;
+	vertical-align: middle;
+	z-index: 5;
+	padding-top: 100px;
+	font-size: 17px;
+	ul
+		position: absolute;
+		right: 0;
+		display: block;
+		max-height: 100%;
+		margin-top: 0;
+		margin-bottom: 0;
+		width: 65%;
+	&:hover
+		background: $rgba;
+		background-image: none;
+		z-index: 4;
+		transform: translateX(-500px);
+		color: #000;
+	img
+		position: absolute;
+		display: block;
+		left: 5%;
+		width: 30%;
