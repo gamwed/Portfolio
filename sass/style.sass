@@ -14,8 +14,9 @@ body
 	background: #f2f2f2;
 	margin: 0;
 	font-family: $f-c;
+	overflow-x: hidden;
 	ul
-		list-style-image: url(img/list.png);
+		list-style-image: url(img/list1.png);
 header
 	background: url(img/theam.jpg);
 	background-size: cover;
@@ -169,70 +170,60 @@ nav
 .skill_wrapper
 	position: relative;
 	display: inline-block;
-	width: 50%;
-	height: 250px;
+	height: 50vh;
 	left: 0
-/*	background-image: url(img/html5.png);
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	-webkit-background-size: contain;
-	background-size: contain;*/
+	cursor: pointer;
+#left_sk
+	width: 50%;
+#right_sk
+	width: 50%;		
 .skill_html
 	position: absolute;
 	display: block;
 	width: 100%;
-	height: 50vh;
-	left: -250px;
 	transition: .5s;
 	vertical-align: middle;
 	z-index: 5;
-	padding-top: 100px;
+	padding-top: 69px;
 	ul
-		display: block;
-		max-height: 100%;
-		margin-top: 0;
+		position: absolute;
+		left: -200%;
+		height: 100%;
+		margin-top: 20px;
 		margin-bottom: 0;
-		width: 65%;
-		padding-left: 10%;
-	&:hover
-		background: $rgba;
-		background-image: none;
-		z-index: 4;
-		transform: translateX(250px);
 		font-size: 17px;
-		color: #000;
+		z-index: 100;
+		li
+			margin-top: 10px;
 	img
 		position: absolute;
-		display: block;
-		right: 5%;
-		width: 30%;	
+		height: 200px;
+		width: 150px;
+		margin-left: calc( 50% - 75px);
+		margin-right: calc( 50% - 75px);
+		z-index: -100;	
 .skill_css
 	position: absolute;
 	display: block;
 	width: 100%;
-	height: 50vh;
-	right: -250px;
+	height: 100%;
 	transition: .5s;
 	vertical-align: middle;
 	z-index: 5;
-	padding-top: 100px;
+	padding-top: 69px;
 	font-size: 17px;
 	ul
+		height: 100%;
 		position: absolute;
-		right: 0;
+		right: -200%;
 		display: block;
-		max-height: 100%;
-		margin-top: 0;
+		margin-top: 20px;
 		margin-bottom: 0;
-		width: 65%;
-	&:hover
-		background: $rgba;
-		background-image: none;
-		z-index: 4;
-		transform: translateX(-500px);
-		color: #000;
+		li
+			margin-top: 10px;
 	img
 		position: absolute;
-		display: block;
-		left: 5%;
-		width: 30%;
+		height: 200px;
+		width: 150px
+		margin-left: calc( 50% - 75px);
+		margin-right: calc( 50% - 75px);
