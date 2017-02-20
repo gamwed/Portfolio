@@ -1,14 +1,14 @@
-$('a[href^="#"]').bind('click.smoothscroll',function (e) {
-e.preventDefault(); 
-var target = this.hash,
-$target = $(target);
+// $('a[href^="#"]').bind('click.smoothscroll',function (e) {
+// e.preventDefault(); 
+// var target = this.hash,
+// $target = $(target);
  
-$('html, body').stop().animate({
- 'scrollTop': $target.offset().top
- }, 800, 'swing', function () {
- window.location.hash = target;
- });
- });
+// $('html, body').stop().animate({
+//  'scrollTop': $target.offset().top
+//  }, 800, 'swing', function () {
+//  window.location.hash = target;
+//  });
+//  });
 
 count=0
 $('#left_sk').click(function(){
@@ -20,38 +20,45 @@ $('#left_sk').click(function(){
 	$('#left_sk').css('background','rgba(255,255,255,0.7');
 	$('.skill_html ul').animate({ "left": "0" }, "slow");
 	$('.skill_css img').animate({ "right": "0" }, "slow");
-	$('.skill_css ul').animate({ "right": "-200%" }, "slow" );
+	$('.skill_css ul').animate({ "right": "-200%" }, "slow");
+	$('#right_sk').css('background','inherit');
 } else {
-	$(this).css("background" , "none");
+	$(this).css("background" , "inherit");
 	$('#right_sk').animate({ "width": "50%"}, "slow");
 	$('.skill_html img').animate({ "left": "0" }, "slow" );
 	$('.skill_css img').animate({ "right": "0" }, "slow");
 	$('#left_sk').animate({ "width": "50%" });
 	$('.skill_html ul').animate({ "left": "-200%" }, "slow");
 	count++;
+	$('.skill_css ul').animate({ "right": "-200%" }, "slow");
+	$('#right_sk').css('background','inherit');
 }});
 
 ct=0
 $('#right_sk').click(function(){
 	if ((ct % 2)==0) {
 	ct++;
+	$('#left_sk').css('background','none');
+	$('.skill_html img').animate({ "left": "0" }, "slow");
 	$('.skill_html ul').animate({ "left": "-200%" }, "fast");
 	$('#right_sk').animate({ "width": "70%" }, "slow" );
 	$('#left_sk').animate({ "width": "30%" }, "slow" );
 	$('#right_sk').css('background','rgba(255,255,255,0.7');
 	$('.skill_css ul').animate({ "right": "15%" }, "slow");
 	$('.skill_css img').animate({ "right": "30%" }, "slow");
-
 } else {
 	$(this).css("background" , "none");
 	$('.skill_css img').animate({ "right": "0" }, "slow");
-	$('.skill_css ul').animate({ "right": "-200%" }, "slow" );
+	$('.skill_css ul').animate({ "right": "-200%" }, "slow");
+	$('#left_sk').css('background','none');
 	$('#right_sk').animate({ "width": "50%" }, "fast" );
 	$('#left_sk').animate({ "width": "50%" }, "slow" );
 	$('.skill_html img').animate({ "left": "0" }, "slow");
 	$('.skill_html ul').animate({ "left": "-200%" }, "slow" );
 	ct++;
 }});
+
+
 
 
 

@@ -16,17 +16,15 @@ body
 	font-family: $f-c;
 	overflow-x: hidden;
 	ul
-		list-style-image: url(img/list1.png);
-header
-	background: url(img/theam.jpg);
-	background-size: cover;
-	height: 100vh;
-.container 
-	width: 85%;
-	margin: 0 auto
-.inner-header
-	font-size: 0;
+		list-style-image: url(img/list1.png);		
+.navbar
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
 	background: $rgba;
+	z-index: 99999999;
+	font-size: 0;
 	padding-top: 10px;
 	padding-bottom: 10px;
 .logo 
@@ -35,13 +33,14 @@ header
 	height: 100%;
 	vertical-align: middle;
 	h1
+		text-align: center;
 		font-style: italic;
 		font-size: 25px;
 		margin: 0;
 .clr-ltr
 	color: $hov-col
 #rbga_bg
-	background-color: $rgba;	
+	background-color: $rgba;		
 nav
 	vertical-align: middle;
 	display: inline-block;
@@ -100,8 +99,9 @@ nav
 		font-size: 45pt;
 		text-shadow: 1px 1px 10px black
 		text-transform: uppercase;
-		z-index: 10000;
+		z-index: 999;
 		margin: 0;
+		margin-top: 86px;
 		color: $wh
 #m_st
 	p
@@ -155,14 +155,19 @@ nav
 	max-width: 45%;
 	p
 		text-align: left;	
-
 .slider-inner
 	padding: 50px;
 	background: $rgba;
 	border-radius: 20px;
 	box-shadow: 0 0 20px rgba(0,0,0,0.5)
 #m_sk
+	background-image: url('img/theam.jpg');
+	-webkit-background-size: cover;
+	background-size: cover;
 	height: 100vh;
+.m_sk_wrapper
+	background: $rgba;
+	height: 100%;	
 .skill_row
 	display: block;
 	height: 50%;
@@ -175,7 +180,9 @@ nav
 	cursor: pointer;
 #left_sk
 	width: 50%;
+	border-right: 1px solid #000;
 #right_sk
+	border-left: 1px solid #000;;
 	width: 50%;		
 .skill_html
 	position: absolute;
