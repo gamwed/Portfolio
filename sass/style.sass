@@ -5,6 +5,12 @@ $f-c: 'Cousine'
 $red: #FF0000;
 $green: #32FF00;
 $wh: #fff;
+$gradtt:  linear-gradient(to top, #ab00ff 0%, #ffffff);
+$gradtb: linear-gradient(to bottom, #ab00ff 0%, #ffffff 100%); 
+.clr-ltr
+	color: $hov-col
+#rbga_bg
+	background-color: $rgba;	
 
 *
 	-webkit-box-sizing: border-box;
@@ -17,8 +23,8 @@ body
 	overflow-x: hidden;
 	ul
 		list-style-image: url(img/list1.png);		
-.navbar
-	position: absolute;
+header
+	position: fixed;
 	top: 0px;
 	left: 0px;
 	width: 100%;
@@ -27,20 +33,6 @@ body
 	font-size: 0;
 	padding-top: 10px;
 	padding-bottom: 10px;
-.logo 
-	display: inline-block;
-	width: 30%;
-	height: 100%;
-	vertical-align: middle;
-	h1
-		text-align: center;
-		font-style: italic;
-		font-size: 25px;
-		margin: 0;
-.clr-ltr
-	color: $hov-col
-#rbga_bg
-	background-color: $rgba;		
 nav
 	vertical-align: middle;
 	display: inline-block;
@@ -55,7 +47,7 @@ nav
 			width: 20%;
 			display: inline-block;
 			list-style: none
-			&::after
+			&::after,::before
 				content: '';
 				width: 0%;
 				margin: 0 auto
@@ -73,36 +65,37 @@ nav
 			color: #000;
 			text-decoration: none;
 			text-transform: uppercase;
-			font-weight: 700;
-.info
+			font-weight: 700;	
+.logo 
 	display: inline-block;
-	margin-left: 34%;
-	border: 10px solid $rgba;
-	line-height: 100px;
-	margin-top: 300px
-	padding: 10px;
-	text-align: center;
+	width: 30%;
+	height: 100%;
+	vertical-align: middle;
+	h1
+		text-align: center;
+		font-style: italic;
+		font-size: 25px;
+		margin: 0;
+#home
+	height: 100vh;
+.greet
+	height: 100%;
+.greet-wapper
+	display: inline-block;
+	height: 100%
+	width: 100%;
+	line-height: 100%;
 	h2
-		margin: 0 auto
-		display: block;
-		background: $rgba;
-		color: rgba(0,0,0,0.1)
-		font-size: 40px;
-		text-transform: uppercase;	
-
-.tab 
-	h2
-		position: absolute;
-		width: 100%;
 		display: inline-block;
 		text-align: center;
-		font-size: 45pt;
-		text-shadow: 1px 1px 10px black
+		width: 100%;
+		height: 100%;	
+		line-height: 100vh;
+		margin-top: 0;
 		text-transform: uppercase;
-		z-index: 999;
-		margin: 0;
-		margin-top: 86px;
-		color: $wh
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-weight: normal;
+		font-size: 100px;
 #m_st
 	p
 		font-weight: 400;
@@ -124,20 +117,16 @@ nav
 	&:first-letter	
 		font-size: 35px;
 		color: $hov-col
-
 #left_text
 	max-width: 550px;
 	p
-		text-align: left;
-	
+		text-align: left;	
 #center_left
 	max-width: 400px;
 	h3:after
 		background: $green;
 	p
 		text-align: left;
-
-
 #center_right
 	position: absolute;
 	bottom: 45px;
@@ -147,7 +136,6 @@ nav
 		background: $red;
 	p
 		text-align: center;
-
 #right_text
 	position: absolute;
 	right: 45px;
@@ -161,17 +149,21 @@ nav
 	border-radius: 20px;
 	box-shadow: 0 0 20px rgba(0,0,0,0.5)
 #m_sk
-	background-image: url('img/theam.jpg');
-	-webkit-background-size: cover;
-	background-size: cover;
 	height: 100vh;
+	overflow: hidden;
 .m_sk_wrapper
 	background: $rgba;
 	height: 100%;	
-.skill_row
+.skill_row_1
+	background: $gradtt
 	display: block;
 	height: 50%;
 	font-size: 0;
+.skill_row_2
+	background: $gradtb
+	display: block;
+	height: 50%;
+	font-size: 0;	
 .skill_wrapper
 	position: relative;
 	display: inline-block;
@@ -180,9 +172,7 @@ nav
 	cursor: pointer;
 #left_sk
 	width: 50%;
-	border-right: 1px solid #000;
 #right_sk
-	border-left: 1px solid #000;;
 	width: 50%;		
 .skill_html
 	position: absolute;
@@ -234,3 +224,27 @@ nav
 		width: 150px
 		margin-left: calc( 50% - 75px);
 		margin-right: calc( 50% - 75px);
+#test
+	font-size: 0;
+	text-align: center;
+	img
+		position: relative;
+		font-size: 0;
+		height: 30vh;
+		display: inline-block;
+		text-align: center;
+		vertical-align: middle;
+	ul
+		display: inline-block;
+		width: 50%;
+		text-align: left;
+		vertical-align: middle;
+#left_block
+	font-size: 17px;
+	display: inline-block;
+	width: 50%;
+#right_block
+	font-size: 17px;
+	display: inline-block;
+	width: 50%;
+	border-left: 1px solid #000

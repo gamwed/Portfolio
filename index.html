@@ -8,50 +8,54 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/section.css">
 	<link rel="stylesheet" href="css/swiper.min.css">
-	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cousine" rel="stylesheet">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 
 	<script src="js/jquery-3.1.1.min.js"></script>
 
+
 	<script src="js/main.js"></script>
-
-	<script src="js/jquery.fullPage.min.js"></script>
-
-	<link href="https://fonts.googleapis.com/css?family=Cousine" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
 
-	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+
+
 
 
 </head>
 <body>
 
-<div class="navbar">
+
+<header>
 	<div class="logo">
 		<h1><span class="clr-ltr">O</span>leksandr <span class="clr-ltr">M</span>yronenko</h1>
 	</div>
 	<nav>
 		<ul>
-			<li><a href="#anch1">home</a></li>
-			<li><a href="#anch2">Lorem.</a></li>
-			<li><a href="">Lorem.</a></li>
+			<li><a href="#home">home</a></li>
+			<li><a href="#m_st">My story</a></li>
+			<li><a href="m_sk.html">my skill</a></li>
 			<li><a href="">Lorem.</a></li>
 			<li><a href="">Lorem.</a></li>
 		</ul>
 	</nav>
-</div>
+</header>
 
-<div id="fullpage">
 
-	<div class="section">
-	</div>
+		<section id="home">
+			<div class="greet">
+				<div class="greet-wapper">
+					<h2>hello & welcome</h2>
+				</div>
+			</div>
+		</section>
 
-	<div class="section" data-anchor="anch1">
 		<section id="m_st">
-
 
 			<div class="m_st_wrapper">
 				<!-- Swiper -->
@@ -96,17 +100,15 @@
 							</div>
 					</div>
 					<!-- Add Pagination -->
-					<div class="swiper-pagination swiper-pagination-white"></div>
+					<div class="swiper-pagination kswiper-pagination-white"></div>
 					<!-- Add Navigation -->
 					<div class="swiper-button-prev swiper-button-black"></div>
 					<div class="swiper-button-next swiper-button-black"></div>
 			</div>
 			</div>
 		</section>
-	</div>
 
-	<div class="section" data-anchor="anch2">
-		<section id="m_sk">
+<!-- 		<section id="m_sk">
 			<div class="m_sk_wrapper">
 				<div class="skill_row">
 					<div class="skill_wrapper" id="left_sk">
@@ -124,39 +126,53 @@
 						<div class="skill_css">
 							<img src="css/img/css3.png" alt="">
 								<ul>
-									<li>Lorem ipsum dolor sit amet.</li>
-									<li>Lorem ipsum dolor sit amet.</li>
-									<li>Lorem ipsum dolor sit amet.</li>
-									<li>Lorem ipsum dolor sit amet.</li>
+									<li>Work with w3c CSS standards.</li>
+									<li>Preprocessor SASS (Scout-App)</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-	</div>
 
-</div>
+		<section id="test">
+			<div id="left_block">
+				<ul>
+					<li>lorem1</li>
+					<li>lorem1</li>
+					<li>lorem1</li>
+					<li>lorem1</li>
+				</ul>
+				<img src="css/img/css3.png" id="left_block_logo" alt="">
+			</div>
+			<div id="right_block">
+				<img src="css/img/css3.png" alt="" id="right_block_logo">
+				<ul>
+					<li>lorem1</li>
+					<li>lorem1</li>
+					<li>lorem1</li>
+					<li>lorem1</li>
+				</ul>
+			</div>
+		</section> -->
 
-		<script src="js/main.js"></script>
-		
-		<script>
-			$(document).ready(function(){
-			$('#fullpage').fullpage();
-			});
-		</script>
-		
-		<script>
-		var swiper = new Swiper('.swiper-container', {
-				pagination: '.swiper-pagination',
-				paginationClickable: true,
-				grabCursor: true,
-				nextButton: '.swiper-button-next',
-				prevButton: '.swiper-button-prev',
-				parallax: true,
-				speed: 600,
-		});
-		</script>
+
+<script src="js/main.js"></script>
+
+<script>
+var swiper = new Swiper('.swiper-container', {
+		pagination: '.swiper-pagination',
+		paginationClickable: true,
+		grabCursor: true,
+		nextButton: '.swiper-button-next',
+		prevButton: '.swiper-button-prev',
+		parallax: true,
+		speed: 600,
+});
+</script>
+
+
+
 
 </body>
 </html>
