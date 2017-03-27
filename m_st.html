@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>OM</title>
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/section.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cousine" rel="stylesheet">
+
+
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+
+
+	<script src="js/main.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+
+
+
+
+</head>
+<body>
+
+<header>
+	<div class="logo">
+		<h1><span class="clr-ltr">O</span>leksandr <span class="clr-ltr">M</span>yronenko</h1>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="index.html">home</a></li>
+			<li><a href="m_st.html">my story</a></li>
+			<li><a href="m_sk.html">my skill</a></li>
+			<li><a href="m_edu.html">my edu.</a></li>
+			<li id="hover"><a>more</a>
+				<ul>
+					<li><a href="m_lf.html">my life</a></li>
+					<li><a href="m_pht.html">my like</a></li>
+					<li><a href="m_biz.html">my business</a></li>
+					<li><a href="m_cont.html">Contats</a></li>
+					<li><a href="end.html">END</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<section id="m_st">
+
+	<div class="m_st_wrapper">
+		<!-- Swiper -->
+	<div class="swiper-container">
+			<div class="parallax-bg" data-swiper-parallax="-23%"></div>
+			<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="slider-inner" id="left_text"> 
+							<div class="title" data-swiper-parallax="-100" id="undr_line"><h3>General</h3></div>
+							<div class="text" data-swiper-parallax="-300">
+								<ul>
+									<li><p>Name: Myronenko Olexander.</p></li>
+									<li><p>Age: 21 years.</p></li>
+									<li><p>Gender: Male.</p></li>
+									<li><p>Location: Ukraine. Kharkiv.</p></li>
+									<li><p>Education: Higher Technical BA</p></li>
+								</ul>
+							</div>
+						 </div> 
+					</div>
+					<div class="swiper-slide">
+					<div class="slider-inner" id="center_right"> 
+							<div class="title" data-swiper-parallax="-100" id="undr_line"><h3>Disadvantages</h3></div>
+							<div class="text" data-swiper-parallax="-300">
+									<p>Lack of experience.</p>
+							</div>
+						 </div>
+						<div class="slider-inner" id="center_left"> 
+							<div class="title" data-swiper-parallax="-100" id="undr_line"><h3>Advantages</h3></div>
+							<div class="text" data-swiper-parallax="-300">
+									<p>Ready to learn new knowledge and develop my skills.</p>
+							</div>
+						 </div>  
+					</div>
+					<div class="swiper-slide" >
+						<div class="slider-inner" id="right_text"> 
+							<div class="title" data-swiper-parallax="-100" id="undr_line"><h3>About myself</h3></div>
+							<div class="text" data-swiper-parallax="-300">
+									<p>I'm an honest person who  his time and effort. Man with logical thinking and able to find a way out of any situation.<br>I'm also a team player. Adequately perceive criticism in my address. Anxiously concern to ensure that the work was done accurately in time.</p>
+							</div>
+						 </div> 
+					</div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination kswiper-pagination-white"></div>
+			<!-- Add Navigation -->
+			<div class="swiper-button-prev swiper-button-black"></div>
+			<div class="swiper-button-next swiper-button-black"></div>
+	</div>
+	</div>
+</section>
+
+<script src="js/main.js"></script>
+
+<script>
+var swiper = new Swiper('.swiper-container', {
+		pagination: '.swiper-pagination',
+		paginationClickable: true,
+		grabCursor: true,
+		nextButton: '.swiper-button-next',
+		prevButton: '.swiper-button-prev',
+		parallax: true,
+		speed: 600,
+});
+</script>
+
+
+
+
+</body>
+</html>
